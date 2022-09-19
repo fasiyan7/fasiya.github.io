@@ -443,16 +443,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</form>
 					<script>
         $("#submit-form").submit((e)=>{
+			var a = "success.html";
             e.preventDefault()
             $.ajax({
-				
+			
                 url:"https://script.google.com/macros/s/AKfycbyY5rU8U3B04sUjmnuRCJ2nvCqRvW2T1f1HrkE7La-CUN2hPe4624J16dn6W_Tb3KO1cA/exec",
                 data:$("#submit-form").serialize(),
                 method:"post",
                 success:function (response){
                     //alert("Form submitted successfully")
                     //window.location.reload()
-                    window.location.href="success.html"
+                    //window.location.href="success.html"
+					window.location.href=a;
                 },
                 error:function (err){
                     alert("Something Error")
